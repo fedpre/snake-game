@@ -23,6 +23,8 @@ class Actor:
         self._text = ""
         self._position = Point(0, 0)
         self._velocity = Point(0, 0)
+
+    # Get methods to return the class variables #
         
     def get_position(self):
         """Gets the actor's position in 2d space.
@@ -56,6 +58,8 @@ class Actor:
             Point: The actor's speed and direction.
         """
         return self._velocity
+
+    # Method that creates a change in the actor #
     
     def move_next(self):
         """Moves the actor to its next position according to its velocity. Will 
@@ -73,6 +77,8 @@ class Actor:
         y = 1 + (y1 + y2 - 1) % (constants.MAX_Y - 1)
         position = Point(x, y)
         self._position = position
+
+    # Methods to set the class variables from outside the class #
     
     def set_position(self, position):
         """Updates the actor's position to the given one.
